@@ -1,3 +1,4 @@
+
 hombre(sostenes).
 hombre(pedro).
 hombre(alonso).
@@ -82,18 +83,18 @@ progenitor(jesus,glafira).
 progenitor(jesus,beto).
 progenitor(jesus,artemio).
 
-progenitora(matilde,leonides).
-progenitora(matilde,josefina).
-progenitora(matilde,lucia).
-progenitora(matilde,pepe).
-progenitora(matilde,margarita).
-progenitora(matilde,glafira).
-progenitora(matilde,beto).
-progenitora(matilde,artemio).
+progenitor(matilde,leonides).
+progenitor(matilde,josefina).
+progenitor(matilde,lucia).
+progenitor(matilde,pepe).
+progenitor(matilde,margarita).
+progenitor(matilde,glafira).
+progenitor(matilde,beto).
+progenitor(matilde,artemio).
 
-progenitora(porfiria,alberta).
-progenitora(porfiria,leonor).
-progenitora(porfiria,pedro).
+progenitor(porfiria,alberta).
+progenitor(porfiria,leonor).
+progenitor(porfiria,pedro).
 progenitor(sostenes,alberta).
 progenitor(sostenes,leonor).
 progenitor(sostenes,pedro).
@@ -102,16 +103,16 @@ progenitor(pedro,alonso).
 progenitor(pedro,oscar).
 progenitor(pedro,axa).
 progenitor(pedro,xochilt).
-progenitora(porfiria,pedro).
-progenitora(matilde,josefina).
-progenitora(josefina,alonso).
-progenitora(josefina,oscar).
-progenitora(josefina,axa).
-progenitora(josefina,xochilt).
+progenitor(porfiria,pedro).
+progenitor(matilde,josefina).
+progenitor(josefina,alonso).
+progenitor(josefina,oscar).
+progenitor(josefina,axa).
+progenitor(josefina,xochilt).
 
-progenitora(alberta,carlos).
-progenitora(alberta,hugo).
-progenitora(alberta,eduardo).
+progenitor(alberta,carlos).
+progenitor(alberta,hugo).
+progenitor(alberta,eduardo).
 progenitor(salvador,carlos).
 progenitor(salvador,hugo).
 progenitor(salvador,eduardo).
@@ -119,23 +120,23 @@ progenitor(salvador,eduardo).
 progenitor(oscar,danae).
 progenitor(oscar,zahir).
 progenitor(oscar,arturo).
-progenitora(stefanie,danae).
-progenitora(stefanie,zahir).
-progenitora(stefanie,arturo).
+progenitor(stefanie,danae).
+progenitor(stefanie,zahir).
+progenitor(stefanie,arturo).
 
-progenitora(leonor,alfredo).
-progenitora(leonor,brenda).
+progenitor(leonor,alfredo).
+progenitor(leonor,brenda).
 progenitor(saul,alfredo).
 progenitor(saul,brenda).
 
-progenitora(oliva,ricardo).
-progenitora(oliva,esperanza).
-progenitora(oliva,abelina).
-progenitora(oliva,teodolo).
-progenitora(oliva,anabel).
-progenitora(oliva,otilia).
-progenitora(oliva,marcial).
-progenitora(oliva,elizabeth).
+progenitor(oliva,ricardo).
+progenitor(oliva,esperanza).
+progenitor(oliva,abelina).
+progenitor(oliva,teodolo).
+progenitor(oliva,anabel).
+progenitor(oliva,otilia).
+progenitor(oliva,marcial).
+progenitor(oliva,elizabeth).
 
 progenitor(pepe,ricardo).
 progenitor(pepe,esperanza).
@@ -146,11 +147,11 @@ progenitor(pepe,otilia).
 progenitor(pepe,marcial).
 progenitor(pepe,elizabeth).
 
-progenitora(lucia,arnulfo).
-progenitora(lucia,graciela).
-progenitora(lucia,david).
-progenitora(lucia,raquel).
-progenitora(lucia,prudencio).
+progenitor(lucia,arnulfo).
+progenitor(lucia,graciela).
+progenitor(lucia,david).
+progenitor(lucia,raquel).
+progenitor(lucia,prudencio).
 
 progenitor(othon,arnulfo).
 progenitor(othon,graciela).
@@ -158,12 +159,12 @@ progenitor(othon,david).
 progenitor(othon,raquel).
 progenitor(othon,prudencio).
 
-progenitora(leonides,rebeca).
-progenitora(leonides,amalio).
-progenitora(leonides,josue).
-progenitora(leonides,deni).
-progenitora(leonides,joaquina).
-progenitora(leonides,zuri).
+progenitor(leonides,rebeca).
+progenitor(leonides,amalio).
+progenitor(leonides,josue).
+progenitor(leonides,deni).
+progenitor(leonides,joaquina).
+progenitor(leonides,zuri).
 
 progenitor(jairo,rebeca).
 progenitor(jairo,amalio).
@@ -175,21 +176,21 @@ progenitor(jairo,zuri).
 progenitor(mario,roberto).
 progenitor(mario,hipolito).
 progenitor(mario,miguel).
-progenitora(margarita,roberto).
-progenitora(margarita,hipolito).
-progenitora(margarita,miguel).
+progenitor(margarita,roberto).
+progenitor(margarita,hipolito).
+progenitor(margarita,miguel).
 
 progenitor(beto,guillermo).
 progenitor(beto,erika).
 progenitor(beto,martin).
-progenitora(catalina,guillermo).
-progenitora(catalina,erika).
-progenitora(catalina,martin).
+progenitor(catalina,guillermo).
+progenitor(catalina,erika).
+progenitor(catalina,martin).
 
 progenitor(artemio,yanet).
 progenitor(artemio,gabriela).
-progenitora(izmari,yanet).
-progenitora(izmari,gabriela).
+progenitor(izmari,yanet).
+progenitor(izmari,gabriela).
 
 % definimos las parejas
 
@@ -235,14 +236,11 @@ pareja(catalina,beto).
 pareja(artemio,izmari).
 pareja(izmari,artemio).
 
-
-% definimos las reglas de prolog
-
-hijo(X,Y) :- progenitor(Y,X); progenitora(Z,Y), hombre(X).
-hija(X,Y) :- progenitor(Y,X); progenitora(Z,Y), mujer(X).
+hijo(X,Y) :- progenitor(Y,X), hombre(X).
+hija(X,Y) :- progenitor(Y,X), mujer(X).
 padre(X,Y):-hombre(X),progenitor(X,Y).
 madre(X,Y):-mujer(X),progenitor(X,Y).
-hermanos(X,Y):-progenitor(Z,X); progenitora(Z,Y),progenitor(Z,Y), not(X==Y).
+hermanos(X,Y):-progenitor(Z,X),progenitor(Z,Y), not(X==Y).
 hermano(X,Y):-hombre(X),hermanos(X,Y).
 hermana(X,Y):-mujer(X),hermanos(X,Y).
 esposo(X,Y):-pareja(X,Y),hombre(X).
@@ -254,16 +252,15 @@ nuera(X,Y):-suegro(Y,X);suegra(Y,X),mujer(X).
 cuñados(X,Y):-((pareja(X,Z),hermanos(Z,Y));(pareja(Y,Z),hermanos(Z,X))).
 cuñado(X,Y):-cuñados(X,Y),hombre(X).
 cuñada(X,Y):-cuñados(X,Y),mujer(X).
-abuelo(X,Y):-progenitor(Z,Y); progenitora(Z,Y),padre(X,Z).
-abuela(X,Y):-progenitor(Z,Y); progenitora(Z,Y),madre(X,Z).
-nieto(X,Y):-progenitor(Y,Z) ; progenitora(Z,Y),progenitor(Z,X) ; progenitora(Z,Y),hombre(X).
-nieta(X,Y):-progenitor(Y,Z) ; progenitora(Z,Y),progenitor(Z,X); progenitora(Z,Y),mujer(X).
-tio(X,Y):-progenitor(Z,Y) ; progenitora(Z,Y),(hermano(X,Z);cuñado(X,Z)).
-tia(X,Y):-progenitor(Z,Y) ; progenitora(Z,Y),(hermana(X,Z);cuñada(X,Z)).
-primo(X,Y):-progenitor(Z,X) ; progenitora(Z,Y),progenitor(W,Y) ; progenitora(Z,Y),hermanos(Z,W),hombre(X).
-prima(X,Y):-progenitor(Z,X) ; progenitora(Z,Y),progenitor(W,Y); progenitora(Z,Y),hermanos(Z,W),mujer(X).
-
-sobrino(X,Y) :- hermano(Y,W), progenitor(W,X); progenitora(Z,Y).
-
-% sobrino(X,Y) :-  hijo(X,Z), hermano(Z,Y), hombre(x).
-sobrina(X,Y) :-  hija(X,Z), hermano(Z,Y), mujer(x).
+abuelo(X,Y):-progenitor(Z,Y),padre(X,Z).
+abuela(X,Y):-progenitor(Z,Y),madre(X,Z).
+nieto(X,Y):-progenitor(Y,Z),progenitor(Z,X),hombre(X).
+nieta(X,Y):-progenitor(Y,Z),progenitor(Z,X),mujer(X).
+tio(X,Y):-progenitor(Z,Y),(hermano(X,Z);cuñado(X,Z)).
+tia(X,Y):-progenitor(Z,Y),(hermana(X,Z);cuñada(X,Z)).
+primo(X,Y):-progenitor(Z,X),progenitor(W,Y),hermanos(Z,W),hombre(X).
+prima(X,Y):-progenitor(Z,X),progenitor(W,Y),hermanos(Z,W),mujer(X).
+sobrino(X,Y) :- hermanos(Y,W), progenitor(W,X),hombre(X).
+sobrina(X,Y) :- hermanos(Y,W), progenitor(W,X),mujer(X).
+bisabuelo(X,Y) :- progenitor(W,Y), abuelo(X,W).
+bisabuela(X,Y) :- progenitor(W,Y), abuela(X,W).
